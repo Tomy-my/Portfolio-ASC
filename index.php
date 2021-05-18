@@ -10,7 +10,7 @@ include('header.php');
     </p>
     <div class="container_index_boutton">
         <button><a href="edit.php">Projets</a></button>
-        <button><a href="index.php">C.V</a></button>
+        <button><a href="cv.php">C.V</a></button>
         <button><a href="index.php">Contact</a></button>
     </div>
 </div> 
