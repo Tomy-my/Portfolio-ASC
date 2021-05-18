@@ -13,11 +13,6 @@ include('header.php');
         <button><a href="index.php">Contact</a></button>
     </div>
 
-    <!-- <div id="d1">
-        <p>Ce texte appartient au premier div de ma page</p>
-        <p id="p1" class="hide">Ce deuxième paragraphe également</p>
-    </div> -->
-
 <?php
 include('footer.php');
 ?>

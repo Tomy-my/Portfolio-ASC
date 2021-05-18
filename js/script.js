@@ -1,9 +1,15 @@
-// let d1 = document.getElementById("d1");
-// let p1 = document.getElementById("p1");
 
+// Afficher le choix des deux langues 
 
-// d1.addEventListener("mouseover", () => {p1.style.display = "flex";});
-// d1.addEventListener("mouseout", () => {p1.style.display = "none";});
+let d1 = document.querySelector("#translate");
+let p1 = document.querySelector("#choice");
 
-
-
+d1.addEventListener("click", () => {
+    p1.style.opacity = "1";
+    p1.style.transition = "all 0.4s ease";   
+    
+    setTimeout(function() {
+        p1.style.opacity = "0";
+        p1.style.transition = "all 1s ease";
+        }, 3500);
+})

@@ -36,7 +36,7 @@ nav{
   border-top: solid 1px #000;
 
 
-  box-shadow: 0px 0px 90px 5px rgba(0, 0, 0, 0.51);
+
 
 
   z-index: 100;
@@ -44,11 +44,11 @@ nav{
   animation-name: loadingNav;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1s;
+  animation-timing-function: ease-cubic-bezier(.18,.89,.32,1.28);
+  animation-duration: 2s;
 }
 
-#home, #projet, #cv, #contact, #translate, p#fr, p#en{
+#home, #projet, #cv, #contact, #translate{
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 100px;
@@ -67,30 +67,38 @@ nav{
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 1s;
-  animation-delay: 1.1s;
+  animation-delay: 1.8s;
 }
 
 #translate{
-  margin-right: 10px;
+  display: flex;
   color: #ddd;
 }
 
 #choice{
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-}
-p#fr{
-  margin-bottom: 1px;
-  margin-right: 10px;
+  display: flex;
+
+  position: absolute;
+
+  margin-top: 1px;
+  margin-left: 25px;
+
+  opacity: 0;
 
   font-size: 15px;
+  letter-spacing: 2px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
 }
+
+p#fr{
+  margin-top: auto;
+  margin-right: 5px;
+}
+
 p#en{
   margin-top: 1px;
-  margin-right: 150px;
-
-  font-size: 15px;
+  margin-bottom: auto;
 }
 
 #portfo{
@@ -109,21 +117,18 @@ p#en{
 }
 
 /* -----Animation nav----- */
-#home:hover, #projet:hover, #cv:hover, #contact:hover{
+#home:hover, #projet:hover, #cv:hover, #contact:hover, #translate:hover{
   transform: scale(1.1);
 }
 
 @keyframes loadingNav {
   0%{
-    width: 0%;
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
+    top: -100px;
   }
 
   100%{
-    width: 100%;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+    top: 0px;
+    box-shadow: 0px 0px 90px 5px rgba(0, 0, 0, 0.51);
   }
 
 }
@@ -138,7 +143,6 @@ p#en{
   }
 
 }
-
 
 /* -------------------------Index------------------------- */
 .container_index{

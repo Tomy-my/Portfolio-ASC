@@ -20,10 +20,11 @@
             <div id="projet" > <a href="edit.php">Projets</a> </div>
             <div id="cv"     > <a href="index.php">C.V</a>    </div>
             <div id="contact"> <a href="index.php">Contact</a></div>
-            <div id="translate"><i class="fas fa-globe-americas"></i></div>
-			<div id="choice">
-				<p id="fr">FR</p>
-				<p id="en">EN</p>
+            <div id="translate"> <a href="#choice"><i class="fas fa-globe-americas"></i></a>
+				<div id="choice">
+					<p id="fr">FR</p>
+					<p id="en">EN</p>
+				</div>
 			</div>
 		</nav>
 
