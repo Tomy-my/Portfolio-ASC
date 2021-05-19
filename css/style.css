@@ -296,6 +296,19 @@ p#job{
   color: rgb(202, 202, 202);
 }
 
+.social_cv{
+  display: flex;
+  justify-content: center;
+
+  font-size: 21px;
+
+}
+
+.social_cv a{
+  margin-right: 20px;
+  transition-duration: 0.4s;
+}
+
 .mail{
   height: 20%;
   margin-top: auto;
@@ -322,6 +335,8 @@ button.email{
   color: white;
 
   cursor: pointer;
+
+  transition-duration: 0.3s;
 }
 
 
@@ -343,8 +358,16 @@ button.email{
   background: #fbfbfb;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+/* -----Animation cv----- */
+.social_cv a:hover{
+  transform: scale(1.1);
 
+  color: white;
+}
 
+button.email:hover{
+  background-color: #3d3d3d;
+}
 
 
 

@@ -11,6 +11,12 @@ include('header.php');
                 <p id="nom">Tomy SOTTY</p>
                 <p id="job">Developpeur web</p>
             </div>
+            <div class="social_cv">
+            <a href="https://github.com/Tomy-my"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/_dakor/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" style="margin-right: 0px;"><i class="fab fa-twitter"></i></a>
+            </div>
             <div class="mail">
                 <button class="email">Press here for show my Email</button>
             </div>

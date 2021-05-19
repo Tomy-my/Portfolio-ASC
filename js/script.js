@@ -1,6 +1,5 @@
 
 // Afficher le choix des deux langues 
-
 let d1 = document.querySelector("#translate");
 let p1 = document.querySelector("#choice");
 
