@@ -24,11 +24,17 @@ include('header.php');
         <div class="cv">
             <div class="sous_cv">
                 <h1>À propos de moi</h1>
-                <h4>Tomy SOTTY</h4>
+                <h4>Salut, je suis Tomy SOTTY</h4>
                 <p>Grand fan de l'univers numérique, je passe mes journées à développer et créer des sites internets. Chaque jour, je fais de mon mieux pour innover et trouver de nouvelles idées afin de créer des sites internets uniques et ou l'expérience utilisateur sera la plus satisfaisante possible ! </p>
             </div>
             <div class="skills">
-
+                <div class="left_skills">
+                    <h3>Compétences professionnelles</h3>
+                    <div class=""
+                </div>
+                <div class="right_skills">
+                    <h3>Compétences professionnelles</h3>
+                </div>
             </div>
             <div class="personnel">
                 
