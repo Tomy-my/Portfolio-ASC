@@ -28,12 +28,31 @@ include('header.php');
                 <p>Grand fan de l'univers numérique, je passe mes journées à développer et créer des sites internets. Chaque jour, je fais de mon mieux pour innover et trouver de nouvelles idées afin de créer des sites internets uniques et ou l'expérience utilisateur sera la plus satisfaisante possible ! </p>
             </div>
             <div class="skills">
-                <div class="left_skills">
-                    <h3>Compétences professionnelles</h3>
-                    <div class=""
+                <div class="titre_skills">
+                    <h3>Compétences developpeur</h3>
                 </div>
-                <div class="right_skills">
-                    <h3>Compétences professionnelles</h3>
+                <div class="int_skills">
+                    <figure class="chart" data-percent="1">
+                        <figcaption>70%</figcaption>
+                        <svg width="200" height="200">
+                            <circle class="outer" cx="125" cy="67" r="61" transform="rotate(-90, 95, 95)"/>
+                        </svg>
+                        <p>HTML</p>
+                    </figure>
+                    <figure class="chart" data-percent="2">
+                        <figcaption>60%</figcaption>
+                        <svg width="200" height="200">
+                            <circle class="outer" cx="125" cy="67" r="61" transform="rotate(-90, 95, 95)"/>
+                        </svg>
+                        <p>CSS</p>
+                    </figure>
+                    <figure class="chart" data-percent="3">
+                        <figcaption>40%</figcaption>
+                        <svg width="200" height="200">
+                            <circle class="outer" cx="125" cy="67" r="61" transform="rotate(-90, 95, 95)"/>
+                        </svg>
+                        <p>JS</p>
+                    </figure>
                 </div>
             </div>
             <div class="personnel">

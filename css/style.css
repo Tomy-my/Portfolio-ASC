@@ -363,8 +363,7 @@ button.email{
 }
 
 .sous_cv{
-  height: 29%;
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px #686868;
 }
 
 .sous_cv h1{
@@ -386,12 +385,92 @@ button.email{
 }
 
 .sous_cv p{
+  margin-bottom: 65px;
+
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 1px;
   line-height: 35px;
   
   color: black;
+}
+
+.skills{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  margin-top: 50px;
+  border-bottom: solid 1px #686868;
+}
+
+.skills h3{
+  margin-bottom: 50px;
+
+  font-size: 25px;
+  font-weight: normal;
+  text-align: center;
+  color: #686868;
+}
+
+.int_skills{
+  display: flex;
+  justify-content: space-around;
+
+  margin-bottom: 65px;
+}
+
+.int_skills p{
+  margin-top: 10px;
+
+  font-size: 20px;
+}
+
+.chart {
+  position: relative;
+  display: inline-block;
+  color: #999;
+  font-size: 20px;
+  text-align: center;
+}
+
+.chart figcaption {
+  padding: 30px 5px;
+  width: 100px;
+  height: 50px;
+  border: 11px solid #f0f0f0;
+  border-radius: 100px;
+  line-height: 50px;
+}
+
+.chart svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.outer {
+  fill: transparent;
+  stroke: #38465e;  
+  stroke-width: 10;
+  stroke-dasharray: 535;
+  transition: stroke-dashoffset 1s;
+  -moz-transform: rotate(-89deg) translateX(-190px);
+}
+
+.chart[data-percent='1'] .outer {
+  stroke-dashoffset: 265;         /*Valeur de fin */
+  animation: show1 2s;
+}
+
+.chart[data-percent='2'] .outer {
+  stroke-dashoffset: 295;         /*Valeur de fin */
+  animation: show2 2s;
+}
+
+.chart[data-percent='3'] .outer {
+  stroke-dashoffset: 365;         /*Valeur de fin */
+  animation: show3 2s;
 }
 
 /* -----Animation cv----- */
@@ -404,6 +483,42 @@ button.email{
 button.email:hover{
   background-color: #3d3d3d;
 }
+
+.chart:hover .outer {
+  stroke-dashoffset: 535 !important;
+}
+
+@keyframes show1 {
+  from {
+    stroke-dashoffset: 535; 
+  }
+  
+  to {
+    stroke-dashoffset: 265;      /*Valeur de fin */
+  }
+}
+
+@keyframes show2 {
+  from {
+    stroke-dashoffset: 535; 
+  }
+  
+  to {
+    stroke-dashoffset: 295;      /*Valeur de fin */
+  }
+}
+
+@keyframes show3 {
+  from {
+    stroke-dashoffset: 535; 
+  }
+  
+  to {
+    stroke-dashoffset: 365;      /*Valeur de fin */
+  }
+}
+
+
 
 
 
