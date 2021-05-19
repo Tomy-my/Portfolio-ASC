@@ -23,7 +23,9 @@ include('header.php');
         </div>
         <div class="cv">
             <div class="sous_cv">
-
+                <h1>À propos de moi</h1>
+                <h4>Tomy SOTTY</h4>
+                <p>Grand fan de l'univers numérique, je passe mes journées à développer et créer des sites internets. Chaque jour, je fais de mon mieux pour innover et trouver de nouvelles idées afin de créer des sites internets uniques et ou l'expérience utilisateur sera la plus satisfaisante possible ! </p>
             </div>
             <div class="skills">
 

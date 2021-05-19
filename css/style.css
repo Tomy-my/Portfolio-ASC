@@ -38,7 +38,7 @@ nav{
   position: relative;
 
   width: 100%;
-  height: 9vh;
+  height: 8vh;
   background-color: #293241;
 
   border-bottom: solid 2px #000;
@@ -91,7 +91,7 @@ nav{
 
   font-size: 15px;
   letter-spacing: 2px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   color: white;
 }
 
@@ -113,7 +113,7 @@ p#en{
 
   font-size: 35px;
   letter-spacing: 2px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 #logo{
@@ -283,7 +283,7 @@ p#nom{
   margin-top: -20px;
 
   font-size: 30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   color: white;
 }
 
@@ -343,7 +343,6 @@ button.email{
 .cv{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   position: relative;
 
   top: 0;
@@ -351,12 +350,20 @@ button.email{
   left: 0;
   right: 0;
 
-  width: 40vw;
-  height: 100%;
+  width: 36vw;
+  height: 97%;
   margin-left: 40px;
+  padding: 40px;
+  padding-bottom: 0px;
 
   background: #fbfbfb;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  font-family: 'Roboto', sans-serif;
+}
+
+.cv h1{
+  font-family: 'Ubuntu', sans-serif;
 }
 /* -----Animation cv----- */
 .social_cv a:hover{
@@ -378,7 +385,7 @@ button.email:hover{
 
 
 /* -------------------------footer------------------------- */
-.footer{
+footer{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -386,7 +393,7 @@ button.email:hover{
   position: relative;
 
   width: 100%;
-  height: 9vh;
+  height: 8vh;
   margin-top: 81vh;
 
   top: 5px;
@@ -405,7 +412,7 @@ button.email:hover{
   animation-duration: 2s;
 }
 
-.footer p{
+footer p{
   font-size: 15px;
   color: white;
   text-align: center;

@@ -1,6 +1,6 @@
-<div class="footer">
+<footer>
     <p>© 2021 Copyright : Portfolio Tomy SOTTY</p>
-</div>
+</footer>
 
 <!-- scripts -->
 <script src="js/particles.js"></script>
