@@ -17,8 +17,8 @@ d1.addEventListener("click", () => {
 
 var n = 45; 
 var cpt = 0; 
-var duree = 5; 
-var delta = Math.ceil((duree * 1000) / n); 
+var duree = 2; 
+var delta = Math.ceil((duree * 550) / n); 
 var node =  document.querySelector(".int_php span"); 
  
 function countdown() {
@@ -33,8 +33,8 @@ setTimeout(countdown, delta);
 
 var nAe = 25; 
 var cptAe = 0; 
-var dureeAe = 5; 
-var deltaAe = Math.ceil((dureeAe * 1000) / nAe); 
+var dureeAe = 2; 
+var deltaAe = Math.ceil((dureeAe * 650) / nAe); 
 var nodeAe =  document.querySelector(".int_ae span"); 
  
 function countdownAe() {
@@ -49,8 +49,8 @@ setTimeout(countdownAe, deltaAe);
 
 var nF = 50; 
 var cptF = 0; 
-var dureeF = 5; 
-var deltaF = Math.ceil((dureeF * 1000) / nF); 
+var dureeF = 2; 
+var deltaF = Math.ceil((dureeF * 555) / nF); 
 var nodeF =  document.querySelector(".int_figma span"); 
  
 function countdownF() {

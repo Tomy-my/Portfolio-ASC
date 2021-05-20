@@ -90,6 +90,23 @@ include('header.php');
                     </div>
                 </div>
             </div>
+            <div class="caractere">
+                <h3>Caractéristiques personnelles</h3>
+                <div class="int_cara">
+                    <div class="left_cara">
+                        <ui>
+                            <li><i class="fas fa-check"></i>Curieux</li>
+                            <li><i class="fas fa-check"></i>Logique</li>
+                            <li><i class="fas fa-check"></i>Attentif</li>
+                            <li><i class="fas fa-times"></i>Impatient</li>
+                            <li><i class="fas fa-check"></i>Perséverant</li>
+                        </ui>
+                    </div>
+                    <div class="right_cara">
+                        
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="skills_right">
             <div class="cadre_img"><img src="img/html.png" alt="Logo HTML" style="margin-top: 25px;"> </div>
