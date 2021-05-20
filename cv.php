@@ -29,7 +29,7 @@ include('header.php');
             </div>
             <div class="skills">
                 <div class="titre_skills">
-                    <h3>Compétences developpeur</h3>
+                    <h3>Compétences Front-End</h3>
                 </div>
                 <div class="int_skills">
                     <figure class="chart" data-percent="1">
@@ -56,11 +56,52 @@ include('header.php');
                 </div>
             </div>
             <div class="personnel">
-                
+                    <h3>Compétences professionnelles</h3>
+                <div class="int_personnel">
+                    <div class="circle_personnel">
+                        <figure class="chart" data-percent="4">
+                            <figcaption>45%</figcaption>
+                            <svg width="200" height="200">
+                                <circle class="outer" cx="125" cy="67" r="61" transform="rotate(-90, 95, 95)"/>
+                            </svg>
+                            <p>Photoshop</p>
+                        </figure>
+                        <figure class="chart" data-percent="5">
+                            <figcaption>45%</figcaption>
+                            <svg width="200" height="200">
+                                <circle class="outer" cx="125" cy="67" r="61" transform="rotate(-90, 95, 95)"/>
+                            </svg>
+                            <p>Illustrator</p>
+                        </figure>
+                    </div>
+                    <div class="slide_personnel">
+                        <p id="title_slide">PHP</p>
+                        <div class="slide_php">
+                            <div class="int_php"><p><span>0</span>%</p></div>
+                        </div>
+                        <p id="title_slide">Figma</p>
+                        <div class="slide_figma">
+                            <div class="int_figma"><p><span>0</span>%</p></div>
+                        </div>
+                        <p id="title_slide">After Effect</p>
+                        <div class="slide_ae">
+                            <div class="int_ae"><p><span>0</span>%</p></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="skills_right">
+            <div class="cadre_img"><img src="img/html.png" alt="Logo HTML" style="margin-top: 25px;"> </div>
+            <div class="cadre_img"><img src="img/css.png" alt="Logo CSS"> </div>
+            <div class="cadre_img"><img src="img/js.png" alt="Logo JS"> </div>
+            <div class="cadre_img"><img src="img/mysql.png" alt="Logo MYSQL"> </div>
+            <div class="cadre_img"><img src="img/ps.png" alt="Logo PHOTOSHOP"> </div>
+            <div class="cadre_img"><img src="img/ai.png" alt="Logo ILLUSTRATOR"> </div>
+            <div class="cadre_img"><img src="img/ae.png" alt="Logo AFTER EFFECT"> </div>
+            <div class="cadre_img"><img src="img/figma.png" alt="Logo FIGMA"> </div>
+        </div>
     </div>
-    
 <?php
 include('footer.php');
 ?>
