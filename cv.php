@@ -27,34 +27,6 @@ include('header.php');
                 <h4>Salut, je suis Tomy SOTTY</h4>
                 <p>Grand fan de l'univers numérique, je passe mes journées à développer et créer des sites internets. Chaque jour, je fais de mon mieux pour innover et trouver de nouvelles idées afin de créer des sites internets uniques et ou l'expérience utilisateur sera la plus satisfaisante possible ! </p>
             </div>
-            <div class="skills">
-                <div class="titre_skills">
-                    <h3>Compétences Front-End</h3>
-                </div>
-                <div class="int_skills">
-                    <figure class="chart" data-percent="1">
-                        <figcaption>70%</figcaption>
-                        <svg width="200" height="200">
-                            <circle class="outer" cx="125" cy="67" r="61" transform="rotate(-90, 95, 95)"/>
-                        </svg>
-                        <p>HTML</p>
-                    </figure>
-                    <figure class="chart" data-percent="2">
-                        <figcaption>60%</figcaption>
-                        <svg width="200" height="200">
-                            <circle class="outer" cx="125" cy="67" r="61" transform="rotate(-90, 95, 95)"/>
-                        </svg>
-                        <p>CSS</p>
-                    </figure>
-                    <figure class="chart" data-percent="3">
-                        <figcaption>40%</figcaption>
-                        <svg width="200" height="200">
-                            <circle class="outer" cx="125" cy="67" r="61" transform="rotate(-90, 95, 95)"/>
-                        </svg>
-                        <p>JS</p>
-                    </figure>
-                </div>
-            </div>
             <div class="personnel">
                     <h3>Compétences professionnelles</h3>
                 <div class="int_personnel">
@@ -90,24 +62,80 @@ include('header.php');
                     </div>
                 </div>
             </div>
+            <div class="skills">
+                <div class="titre_skills">
+                    <h3>Compétences Front-End</h3>
+                </div>
+                <div class="int_skills">
+                    <figure class="chart" data-percent="1">
+                        <figcaption>70%</figcaption>
+                        <svg width="200" height="200">
+                            <circle class="outer" cx="125" cy="67" r="61" transform="rotate(-90, 95, 95)"/>
+                        </svg>
+                        <p>HTML</p>
+                    </figure>
+                    <figure class="chart" data-percent="2">
+                        <figcaption>60%</figcaption>
+                        <svg width="200" height="200">
+                            <circle class="outer" cx="125" cy="67" r="61" transform="rotate(-90, 95, 95)"/>
+                        </svg>
+                        <p>CSS</p>
+                    </figure>
+                    <figure class="chart" data-percent="3">
+                        <figcaption>40%</figcaption>
+                        <svg width="200" height="200">
+                            <circle class="outer" cx="125" cy="67" r="61" transform="rotate(-90, 95, 95)"/>
+                        </svg>
+                        <p>JS</p>
+                    </figure>
+                </div>
+            </div>
+            <div class="formation">
+                <h3>Mes formations</h3>
+                <h4>Acces Code School | Developpeur web</h4>
+                <p>- Diplôme : Niveau bac+ 2  <br>- Lieux : 58000 Nevers<br>- Durée : 8 mois (Actuellement en cours)</p>
+                <hr>
+                <h4>École de la deuxième chance (E2C Nièvre)</h4>
+                <p>- Diplôme : Remise à niveau des matières générales  <br>- Lieux : 58640 Varennes-Vauzelles<br>- Durée : 1 an</p>
+            </div>
             <div class="caractere">
-                <h3>Caractéristiques personnelles</h3>
+                <h3>Qualités / Défauts</h3>
                 <div class="int_cara">
                     <div class="left_cara">
-                        <ui>
-                            <li><i class="fas fa-check"></i>Curieux</li>
-                            <li><i class="fas fa-check"></i>Logique</li>
-                            <li><i class="fas fa-check"></i>Attentif</li>
-                            <li><i class="fas fa-times"></i>Impatient</li>
-                            <li><i class="fas fa-check"></i>Perséverant</li>
-                        </ui>
+                    <ui>
+                        <li><i class="fas fa-check"></i>Curieux</li>
+                        <li><i class="fas fa-check"></i>Logique</li>
+                        <li><i class="fas fa-check"></i>Attentif</li>
+                        <li><i class="fas fa-times"></i>Impatient</li>
+                        <li><i class="fas fa-check"></i>Perséverant</li>
+                    </ui>
                     </div>
                     <div class="right_cara">
-                        
+                        <img id="ampoule" src="img/svg/ampoule.svg" alt="Décoration">
+                    </div>
+                </div>
+            </div>
+            <div class="download">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div id="ms-container">
+                            <label for="ms-download">
+                                <div class="ms-content">
+                                    <div class="ms-content-inside">
+                                        <input type="checkbox" id="ms-download" />
+                                        <div class="ms-line-down-container">
+                                            <div class="ms-line-down"></div>
+                                        </div>
+                                        <div class="ms-line-point"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
         <div class="skills_right">
             <div class="cadre_img"><img src="img/html.png" alt="Logo HTML" style="margin-top: 25px;"> </div>
             <div class="cadre_img"><img src="img/css.png" alt="Logo CSS"> </div>
