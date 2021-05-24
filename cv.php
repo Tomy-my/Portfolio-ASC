@@ -112,25 +112,7 @@ include('header.php');
                     </div>
                     <div class="right_cara">
                         <img id="ampoule" src="img/svg/ampoule.svg" alt="Décoration">
-                    </div>
-                </div>
-            </div>
-            <div class="download">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div id="ms-container">
-                            <label for="ms-download">
-                                <div class="ms-content">
-                                    <div class="ms-content-inside">
-                                        <input type="checkbox" id="ms-download" />
-                                        <div class="ms-line-down-container">
-                                            <div class="ms-line-down"></div>
-                                        </div>
-                                        <div class="ms-line-point"></div>
-                                    </div>
-                                </div>
-                            </label>
-                        </div>
+                        <?php include('img/svg/svg.php'); ?>
                     </div>
                 </div>
             </div>
