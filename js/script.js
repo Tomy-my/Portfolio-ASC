@@ -107,3 +107,22 @@ function resetButton(){
   cloud.classList.remove('animate-cloud');
 
 }
+
+
+
+// Redirection img projet
+function projet1(){
+  document.location.href="https://www.youtube.com/"; 
+}
+function projet2(){
+  document.location.href="https://www.youtube.com/"; 
+}
+function projet3(){
+  document.location.href="https://www.youtube.com/"; 
+}
+function projet4(){
+  document.location.href="https://www.youtube.com/"; 
+}
+function projet5(){
+  document.location.href="https://www.youtube.com/"; 
+}

@@ -11,7 +11,7 @@ include('header.php');
     <div class="container_index_boutton">
         <button><a href="projet.php">Projets</a></button>
         <button><a href="cv.php">C.V</a></button>
-        <button><a href="index.php">Contact</a></button>
+        <button><a href="contact.php">Contact</a></button>
     </div>
 </div> 
 

@@ -19,7 +19,7 @@
             <div id="home"   > <a href="index.php">Accueil</a></div>
             <div id="projet" > <a href="projet.php">Projets</a> </div>
             <div id="cv"     > <a href="cv.php">C.V</a>    </div>
-            <div id="contact"> <a href="index.php">Contact</a></div>
+            <div id="contact"> <a href="contact.php">Contact</a></div>
             <div id="translate"> <a href="#choice"><i class="fas fa-globe-americas"></i></a>
 				<div id="choice">
 					<p id="fr">FR</p>
