@@ -1,4 +1,5 @@
 <?php
+session_start();
 $titre = "C.V";
 
 include('header.php');

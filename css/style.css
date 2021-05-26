@@ -57,7 +57,7 @@ nav{
   margin-bottom: auto;
   margin-right: 100px;
 
-  font-size: 20px;
+  font-size: 17px;
   letter-spacing: 2px;
   font-family: 'Roboto', sans-serif;
   color: white;
@@ -236,7 +236,6 @@ p#en{
   right: 0;
 
   width: 100%;
-  height: 250vh;
   margin-top: 6vh;
   margin-left: auto;
   margin-right: auto;
@@ -351,7 +350,6 @@ button.email{
   right: 0;
 
   width: 36vw;
-  height: 97%;
   margin-left: 40px;
   margin-right: 2px;
   padding: 40px;
@@ -854,8 +852,7 @@ button.email:hover{
   left: 0;
   right: 0;
 
-  width: 94%;
-  height: 260vh;
+  width: 90%;
   margin-top: 6vh;
   margin-left: auto;
   margin-right: auto;
@@ -864,6 +861,8 @@ button.email:hover{
 
   background: #fbfbfb;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  font-family: 'Roboto', sans-serif;
 }
 
 .container_projet1, .container_projet2, .container_projet3, .container_projet4, .container_projet5{
@@ -875,24 +874,31 @@ button.email:hover{
 }
 
 .projet_container img{
+  position: relative;
+
   width: 50%;
 
   transition: 0.6s;
   cursor: pointer;
-}
 
-.projet_container img:hover{
-  filter: grayscale(100%);
+  animation-name: startingProject;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0,.92,1,.18);
+  animation-duration: 1.8s;
 }
 
 .text_projet{
   width: 50%;
+
+  padding: 40px;
+
   text-align: center;
 }
 
 .text_projet hr{
   width: 10%;
   margin-top: 15px;
+  margin-bottom: 65px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -903,12 +909,42 @@ button.email:hover{
 }
 
 .text_projet p {
-  margin-top: 65px;
-  padding-left: 40px;
-  padding-right: 40px;
+  margin-top: 15px;
 
   font-size: 17px;
   color: #999;
+}
+
+.text_projet ul{
+  text-align: initial;
+}
+
+.text_projet li{
+  margin-bottom: 10px;
+  
+  list-style: none;
+  color: #999;
+}
+
+.text_projet li#last {
+  margin-bottom: 35px;
+}
+
+.text_projet li span{
+  color: #686868;;
+}
+/* -----Animation footer----- */
+.projet_container img:hover{
+  filter: grayscale(100%);
+}
+
+@keyframes startingProject {
+  0%{
+    left: -400px;
+  }
+  100%{
+    left: 0px;
+  }
 }
 
 /* -------------------------contact------------------------- */
@@ -922,8 +958,8 @@ button.email:hover{
   left: 0;
   right: 0;
 
-  width: 65vw;
-  height: 65vh;
+  width: 59vw;
+  height: 61vh;
 
   margin-top: 6vh;
   margin-left: auto;
@@ -949,7 +985,7 @@ button.email:hover{
   width: 10%;
 
   margin-top: 15px;
-  margin-bottom: 55px;
+  margin-bottom: 85px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -965,7 +1001,7 @@ button.email:hover{
 }
 
 .form input {
-    width: 92%;
+    width: 94%;
     height: 50px;
 
     margin-left: 30px;
@@ -991,7 +1027,7 @@ input.subject{
 }
 
 .separator hr{
-    width: 600px;
+    width: 100%;
     margin-top: -32px;
     margin-left: 30px;
 
@@ -1008,7 +1044,7 @@ input.subject{
 
 
 textarea {
-  width: 600px;
+  width: 30%;
   height: 248px;
 
   margin-top: -5px;
@@ -1039,28 +1075,7 @@ textarea:focus{
 }
 
 .send{
-  display: flex;
-  justify-content: space-around;
-}
-
-.send_left{
-  width: 50%;
-
-  text-align: center;
-}
-
-.send_left img{
-  width: 40%;
-}
-
-.send_right{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  width: 50%;
-
-  text-align: center;
+  margin: auto;
 }
 
 button.send{

@@ -15,7 +15,7 @@
     <body>
 		<nav>
 			<img id="logo" src="img/svg/favicon.svg" alt="Logo du site">
-            <div id="portfo" > <a href="index.php">Portfolio</a></div>
+            <div id="portfo" > <a href="login/index.php">Portfolio</a></div>
             <div id="home"   > <a href="index.php">Accueil</a></div>
             <div id="projet" > <a href="projet.php">Projets</a> </div>
             <div id="cv"     > <a href="cv.php">C.V</a>    </div>

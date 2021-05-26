@@ -20,15 +20,13 @@ include('header.php');
 		</div>
 	</form>
     <div class="send">
-        <div class="send_left">
-            <img src="img/svg/contact.svg" alt="Image de décoration">
-        </div>
-        <div class="send_right">
-            <button class="send"> <i class="far fa-paper-plane"></i>&nbsp; &nbsp; Envoyer</button>
-        </div>
+        <button class="send"> <i class="far fa-paper-plane"></i>&nbsp; &nbsp; Envoyer</button>
     </div>
 </div>
 
 <?php
 include('footer.php');
 ?>
+
+
+<!-- <img src="img/svg/contact.svg" alt="Image de décoration"> -->
