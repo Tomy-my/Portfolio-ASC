@@ -3,7 +3,7 @@ session_start();
 
 if (empty($_SESSION['admin']))
 {
-    header('Location: ../login/index.php');
+    header('Location: login/index.php');
     exit();
 }
 else
@@ -15,7 +15,7 @@ else
         <div class="container_dashboard_projet">
             <h1>Dashboard section : Projet</h1>
             <div class="add_dashboard_projet">
-                <a href="#">
+                <a href="projet_add.php">
                     <h1><i class="fas fa-plus-circle"></i> Add projet</h1>
                 </a>
             </div>
@@ -34,7 +34,7 @@ else
                             </ul>
                         </div>
                         <div class="edit_boucle">
-                            <button id="edit">Éditer</button>
+                            <button id="edit"><a href="projet_edit.php">Éditer</a></button>
                             <button id="delete">Supprimer</button>
                         </div>
                     </div>

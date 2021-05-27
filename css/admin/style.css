@@ -64,7 +64,7 @@
     animation-duration: 1s;
     animation-delay: 1.8s;
   }
-  
+
   #portfo{
     margin-top: auto;
     margin-bottom: auto;
@@ -243,12 +243,6 @@ button#edit, button#delete{
 button#delete{
     background-color: #e62323;
 }
-  
-
-
-
-
-
 /* -------------------------Dashboard animation------------------------- */
 .add_dashboard_projet:hover i{
     transform: rotate(360deg);
@@ -266,3 +260,49 @@ button#delete:hover{
     background-color: #f81313;
     border-top-left-radius: 10px;
 }
+
+/* -------------------------Form add projet------------------------- */
+.container_form_projet{
+  width: 40%;
+
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 50px;
+
+  background: #fbfbfb;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  font-family: 'Roboto', sans-serif;
+  color: #686868;
+}
+
+.container_form_projet h1{
+  text-align: center;
+
+}.container_form_projet hr#sous_titre{
+  width: 30%;
+
+  margin-top: 25px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form_projet{
+  display: flex;
+  flex-direction: column;
+
+  width: 95%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 15px;
+}
+
+
+
+
+
