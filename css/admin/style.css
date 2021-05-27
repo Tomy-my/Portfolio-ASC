@@ -1,0 +1,268 @@
+/* Paramètre du CSS */
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  body{        
+    background-color: #eee;
+  }
+  
+  a:link{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.877);
+  }
+  a:visited{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  
+  
+  /* -------------------------Nav------------------------- */
+  nav{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  
+    width: 100%;
+    height: 8vh;
+    background-color: #293241;
+  
+    border-bottom: solid 2px #000;
+  
+    z-index: 100;
+  
+    animation-name: loadingNav;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-cubic-bezier(.18,.89,.32,1.28);
+    animation-duration: 2s;
+  }
+  
+  #home, #projet, #cv, #dashboard_projet, #dashboard_cv, #logout{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 100px;
+  
+    font-size: 17px;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+  
+    transition-duration: 0.4s;
+  
+    opacity: 0;
+  
+    animation-name: loadingText;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-delay: 1.8s;
+  }
+  
+  #portfo{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: 15px;
+  
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+  }
+  
+  #logo{
+    margin-left: 75px;
+  }
+  
+  /* -----Animation nav----- */
+  #home:hover, #projet:hover, #cv:hover, #dashboard_projet:hover, #dashboard_cv:hover, #logout:hover{
+    transform: scale(1.1);
+  }
+  
+  @keyframes loadingNav {
+    0%{
+      top: -100px;
+    }
+  
+    100%{
+      top: 0px;
+      box-shadow: 0px 0px 90px 5px rgba(0, 0, 0, 0.51);
+    }
+  
+  }
+  
+  @keyframes loadingText {
+    from{
+      opacity: 0;
+    }
+  
+    to{
+      opacity: 1;
+    }
+  
+  }
+
+/* -------------------------Dashboard------------------------- */
+.container_dashboard_projet{
+    width: 70%;
+
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 40px;
+
+    background: #fbfbfb;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    font-family: 'Roboto', sans-serif;
+    color: #686868;
+}
+
+.container_dashboard_projet h1{
+    text-align: center;
+    font-size: 30px;
+    color: #686868;
+}
+
+.add_dashboard_projet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 15%;
+    height: 35px;
+
+    margin-left: 1121px;
+
+    border-top-left-radius: 10px;
+    border: solid 2px #b3b3b3;
+    border-bottom: none;
+    background-color: #eee;
+
+    transition: 0.4s;
+}
+
+.add_dashboard_projet h1{
+    font-size: 25px;
+    color: #008000;
+}
+
+.add_dashboard_projet i{
+    transition: 1.5s;
+}
+
+.edit_dashboard_projet{
+    display: flex;
+    flex-direction: column;
+
+    width: 95%;
+    height: 60vh;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+
+    background-color: #eee;
+    border: solid 2px rgba(0, 0, 0, 0.25);
+}
+
+.int_dashboard_projet{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    border-bottom: solid 1px black;
+}
+
+.img_boucle{
+    width: 65%;
+}
+
+.img_boucle img{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.right_boucle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+.petitText_boucle{
+    margin-top: 15px;
+    padding: 20px;
+}
+
+.petitText_boucle h4{
+    margin-bottom: 40px;
+
+    font-size: 25px;
+    text-align: center;
+}
+
+.petitText_boucle li{
+    margin-bottom: 15px;
+
+    list-style: none;
+}
+
+.edit_boucle{
+    display: flex;
+
+    text-align: center;
+}
+
+button#edit, button#delete{
+    display: block;
+    width: 125px;
+    height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    background-color: #FFA500;
+  
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+  
+    cursor: pointer;
+  
+    transition-duration: 0.4s;
+}
+
+button#delete{
+    background-color: #e62323;
+}
+  
+
+
+
+
+
+/* -------------------------Dashboard animation------------------------- */
+.add_dashboard_projet:hover i{
+    transform: rotate(360deg);
+}
+
+.add_dashboard_projet:hover{
+    background-color: #ddd;
+}
+
+button#edit:hover{
+    background-color: #ffb321;
+    border-top-left-radius: 10px;
+}
+button#delete:hover{
+    background-color: #f81313;
+    border-top-left-radius: 10px;
+}

@@ -12,11 +12,43 @@ body{
   background-color: #eee;
 }
 
-a:link{
+nav a:link{
   text-decoration: none;
   color: rgba(255, 255, 255, 0.877);
 }
-a:visited{
+nav a:visited{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.container_index a:link{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.877);
+}
+.container_index a:visited{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.container_cv a:link{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.877);
+}
+.container_cv a:visited{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.projet_container a:link{
+  text-decoration: none;
+  color: #686868;
+}
+.projet_container a:visited{
+  text-decoration: none;
+  color: #686868;
+}
+.contact_container a:link{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.877);
+}
+.contact_container a:visited{
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
@@ -905,7 +937,7 @@ button.email:hover{
 
 .text_projet h1{
   font-size: 30px;
-  color: #686868;
+  color: #686868; 
 }
 
 .text_projet p {
@@ -1155,29 +1187,6 @@ footer p{
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* --------------------Template button Download-------------------- */
 

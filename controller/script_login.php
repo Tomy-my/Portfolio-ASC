@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
 
         if($rows==true){
             $_SESSION['admin']=$_POST['username'];
-            header("Location:../admin.php");
+            header("Location:../dashboard_projet.php");
 
         }else{
             $erreur ="Username ou mot de passe inconue";

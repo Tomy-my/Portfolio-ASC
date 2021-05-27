@@ -8,7 +8,7 @@ include('header.php');
     <div class="container_projet1">
         <img src="img/projet1">
         <div class="text_projet">
-            <a href="#"><h1>Département du Jura</h1></a>
+            <h1><a href="#">Département du Jura</a></h1>
             <hr>
             <ul>
                 <li><span>Langage :</span> HTML - CSS - JS</li>
