@@ -6,7 +6,7 @@ if(isset($_REQUEST['btn_insert']))
 {
 	try
 	{
-		$name	= $_REQUEST['txt_name'];	//textbox name "txt_name"
+		$titre_project	= $_REQUEST['txt_name'];	//textbox name "txt_name"
 			
 		$image_file	= $_FILES["txt_file"]["name"];
 		$type		= $_FILES["txt_file"]["type"];	//file name "txt_file"	
@@ -15,7 +15,7 @@ if(isset($_REQUEST['btn_insert']))
 		
 		$path="upload/".$image_file; //set upload folder path
 		
-		if(empty($name)){
+		if(empty($titre_project)){
 			$errorMsg="Please Enter Name";
 		}
 		else if(empty($image_file)){
@@ -46,8 +46,8 @@ if(isset($_REQUEST['btn_insert']))
 		
 		if(!isset($errorMsg))
 		{
-			$insert_stmt=$db->prepare('INSERT INTO tbl_file(name,image) VALUES(:fname,:fimage)'); //sql insert query					
-			$insert_stmt->bindParam(':fname',$name);	
+			$insert_stmt=$db->prepare('INSERT INTO project(titre_project,image) VALUES(:titre_project,:fimage)'); //sql insert query					
+			$insert_stmt->bindParam(':titre_project',$titre_project);	
 			$insert_stmt->bindParam(':fimage',$image_file);	  //bind all parameter 
 		
 			if($insert_stmt->execute())

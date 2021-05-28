@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
 
         $password =sha1($_POST['password']);
 
-        $getdata = $pdo->prepare("SELECT email FROM login WHERE email=? and password = ?");
+        $getdata = $db->prepare("SELECT email FROM login WHERE email=? and password = ?");
         $getdata->execute(array($_POST['username'], $password));
 
         $rows = $getdata->rowCount();

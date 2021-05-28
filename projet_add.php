@@ -8,6 +8,7 @@ if (empty($_SESSION['admin']))
 }
 else
 {
+    include("controller/add_project.php");
 
     include("header_admin.php");
 
@@ -16,33 +17,58 @@ else
             <h1>Formulaire d'ajout : Projet</h1>
             <hr id="sous_titre">
             <div class="form_projet">
-                <form action="?" method="post">
-                    <h3>Titre du projet :</h3>
-                    <input class="titre_projet" type="text" placeholder="Titre"/>
+                <form action="" method="post" enctype="multipart/form-data">
+                    
+                    <p>Titre du projet :</p>
+                    <input class="titre_projet" type="text" name="titre_project" placeholder="Titre"/>
+                    
                     <div class="checkbox_projet">
-                        <h3>Langage(s) :</h3>
-                        <input type="checkbox" name="html" checked>
-                            <label for="html">Html</label>
-                        <input type="checkbox" name="css">
-                            <label for="css">Css</label>
-                        <input type="checkbox" name="js">
-                            <label for="js">Js</label>
-                        <input type="checkbox" name="php">
-                            <label for="php">Php</label>
+                        <p>Langage(s) :</p>
+                        <input type="checkbox" name="html" value="HTML" checked>
+                            <label for="html" style="margin-right: 10px;">Html</label>
+                        <input type="checkbox" name="css" value="CSS" >
+                            <label for="css" style="margin-right: 10px;">Css</label>
+                        <input type="checkbox" name="js" value="JS" >
+                            <label for="js" style="margin-right: 10px;">Js</label>
+                        <input type="checkbox" name="php" value="PHP" >
+                            <label for="php" style="margin-right: 10px;">Php</label>
                     </div>
-                    <h3>Durée :</h3>
-                    <input class="subject" type="text" placeholder="Exemple : 1 Jour/Semaine "/>
-                    <h3>Période :</h3>
+                    
+                    <p>Durée :</p>
+                    <input class="duree_projet" type="text" name="duree_project" placeholder="Exemple : 1 Jour/Semaine "/>
+                    
+                    <p>Période :</p>
                     <input class="periode_project" type="date" name="periode_project"/>
                     <label for="periode_project">Au</label>
                     <input class="periode2_project" type="date" name="periode2_project"/>
-                    <h3>L'image du projet :</h3>
-                    <input class="file_project" type="file" name="file"/>
-                    <textarea type="textarea" placeholder="Message"></textarea>
+                    
+                    <p>L'image du projet :</p>
+                    <input class="file_project" type="file" name="txt_file"/>
+                    
+                    <p>Description :</p>
+                    <textarea class="description_projet" type="textarea" name="desc_project" placeholder="Description du projet"></textarea>
+                    
+                    <div class="send">
+                        <button class="send" name="btn_insert" value="Insert"> <i class="far fa-paper-plane"></i>&nbsp; &nbsp; Envoyer</button>
+                    </div>
                 </form>
-                <div class="send">
-                    <button class="send"> <i class="far fa-paper-plane"></i>&nbsp; &nbsp; Envoyer</button>
-                </div>
+                <?php
+		if(isset($errorMsg))
+		{
+			?>
+            <div class="alert alert-danger">
+            	<strong>WRONG ! <?php echo $errorMsg; ?></strong>
+            </div>
+            <?php
+		}
+		if(isset($insertMsg)){
+		?>
+			<div class="alert alert-success">
+				<strong>SUCCESS ! <?php echo $insertMsg; ?></strong>
+			</div>
+        <?php
+		}
+		?>   
             </div>
         </div>
 

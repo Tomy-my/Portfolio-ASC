@@ -8,6 +8,26 @@ if (empty($_SESSION['admin']))
 }
 else
 {
+    require_once("controller/config_bdd");
+    
+        // if(isset($_REQUEST['delete_id']))
+        // {
+        //     // select image from db to delete
+        //     $id=$_REQUEST['delete_id'];	//get delete_id and store in $id variable
+            
+        //     $select_stmt= $db->prepare('SELECT * FROM tbl_file WHERE id =:id');	//sql select query
+        //     $select_stmt->bindParam(':id',$id);
+        //     $select_stmt->execute();
+        //     $row=$select_stmt->fetch(PDO::FETCH_ASSOC);
+        //     unlink("upload/".$row['image']); //unlink function permanently remove your file
+            
+        //     //delete an orignal record from db
+        //     $delete_stmt = $db->prepare('DELETE FROM tbl_file WHERE id =:id');
+        //     $delete_stmt->bindParam(':id',$id);
+        //     $delete_stmt->execute();
+            
+        //     header("Location:index.php");
+        // }
 
     include("header_admin.php");
 
@@ -20,6 +40,13 @@ else
                 </a>
             </div>
             <div class="edit_dashboard_projet">
+            
+            <?php
+				$select_stmt=$db->prepare("SELECT * FROM tbl_file");
+				$select_stmt->execute();
+			    while($row=$select_stmt->fetch(PDO::FETCH_ASSOC))
+			    {
+			?>
                 <div class="int_dashboard_projet">
                     <div class="img_boucle">
                         <img src="img/projet1.png">
@@ -39,6 +66,9 @@ else
                         </div>
                     </div>
                 </div>
+            <?php
+				}
+			?>
             </div>
         </div>
 <?php 

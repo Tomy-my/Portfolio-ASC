@@ -68,8 +68,8 @@ if(isset($_REQUEST['btn_update']))
 	
 		if(!isset($errorMsg))
 		{
-			$update_stmt=$db->prepare('UPDATE tbl_file SET name=:name_up, image=:file_up WHERE id=:id'); //sql update query
-			$update_stmt->bindParam(':name_up',$name);
+			$update_stmt=$db->prepare('UPDATE tbl_file SET name=:titre_project_up, image=:file_up WHERE id=:id'); //sql update query
+			$update_stmt->bindParam(':titre_project_up',$name);
 			$update_stmt->bindParam(':file_up',$image_file);	//bind all parameter
 			$update_stmt->bindParam(':id',$id);
 			 
