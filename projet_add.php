@@ -23,15 +23,8 @@ else
                     <input class="titre_projet" type="text" name="titre_project" placeholder="Titre"/>
                     
                     <div class="checkbox_projet">
-                        <p>Langage(s) :</p>
-                        <input type="checkbox" name="html" value="HTML" checked>
-                            <label for="html" style="margin-right: 10px;">Html</label>
-                        <input type="checkbox" name="css" value="CSS" >
-                            <label for="css" style="margin-right: 10px;">Css</label>
-                        <input type="checkbox" name="js" value="JS" >
-                            <label for="js" style="margin-right: 10px;">Js</label>
-                        <input type="checkbox" name="php" value="PHP" >
-                            <label for="php" style="margin-right: 10px;">Php</label>
+                        <p>Langage(s) utilisé(s):</p>
+                        <input class="titre_projet" type="text" name="langage" placeholder="Si aucun, rien marquer"/>
                     </div>
                     
                     <p>Durée :</p>

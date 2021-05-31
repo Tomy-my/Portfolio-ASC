@@ -21,11 +21,11 @@ if(isset($_REQUEST['btn_insert']))
 		else if(empty($image_file)){
 			$errorMsg="Please Select Image";
 		}
-		else if($type=="image/jpg" || $type=='image/jpeg' || $type=='image/png' || $type=='image/gif') //check file extension
+		else if($type=="image/jpg" || $type=="image/JPG" || $type=="image/PNG" || $type=='image/jpeg' || $type=='image/png' || $type=='image/gif') //check file extension
 		{	
 			if(!file_exists($path)) //check file not exist in your upload folder path
 			{
-				if($size < 5000000) //check file size 5MB
+				if($size < 10000000000) //check file size 5MB
 				{
 					move_uploaded_file($temp, "upload/" .$image_file); //move upload file temperory directory to your upload folder
 				}

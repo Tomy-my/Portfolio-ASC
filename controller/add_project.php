@@ -7,10 +7,7 @@ if(isset($_REQUEST['btn_insert']))
 	try
 	{
 		$titre_project			= $_REQUEST['titre_project'];	
-		$html					= $_REQUEST['html'];	
-		$css					= $_REQUEST['css'];	
-		$js						= $_REQUEST['js'];	
-		$php					= $_REQUEST['php'];	
+		$langage				= $_REQUEST['langage'];	
 		$duree_project			= $_REQUEST['duree_project'];	
 		$periode_project		= $_REQUEST['periode_project'];	
 		$periode2_project		= $_REQUEST['periode2_project'];	
@@ -26,23 +23,11 @@ if(isset($_REQUEST['btn_insert']))
 		if(empty($titre_project)){
 			$errorMsg="Please Enter titre";
 		}
-		else if(empty($html)){
-			$errorMsg="Please Enter html";
-		}
-		else if(empty($css)){
-			$errorMsg="Please Enter css";
-		}
-		else if(empty($js)){
-			$errorMsg="Please Enter js";
-		}
-		else if(empty($php)){
-			$errorMsg="Please Enter php";
-		}
 
 		else if(empty($image_file)){
 			$errorMsg="Please Select Image";
 		}
-		else if($type=="image/jpg" || $type=='image/jpeg' || $type=='image/png' || $type=='image/gif') 
+		else if($type=="image/jpg" || $type=='image/jpeg' || $type=='image/png' || $type=='image/JPG' || $type=='image/gif') 
 		{	
 			if(!file_exists($path)) //Regarde si l'image existe dans /upload
 			{
@@ -67,12 +52,9 @@ if(isset($_REQUEST['btn_insert']))
 		
 		if(!isset($errorMsg))
 		{
-			$insert_stmt=$db->prepare('INSERT INTO project(titre_project,image,html,css,js,php,duree_project,periode_project,periode2_project,description_project) VALUES(:titre_project,:fimage,:html,:css,:js,:php,:duree_project,:periode_project,:periode2_project,:description_project)');				
+			$insert_stmt=$db->prepare('INSERT INTO project(titre_project,image,langage,duree_project,periode_project,periode2_project,description_project) VALUES(:titre_project,:fimage,:langage,:duree_project,:periode_project,:periode2_project,:description_project)');				
 			$insert_stmt->bindParam(':titre_project',$titre_project);	
-			$insert_stmt->bindParam(':html',$html);	
-			$insert_stmt->bindParam(':css',$css);	
-			$insert_stmt->bindParam(':js',$js);	
-			$insert_stmt->bindParam(':php',$php);	
+			$insert_stmt->bindParam(':langage',$langage);	
 			$insert_stmt->bindParam(':duree_project',$duree_project);	
 			$insert_stmt->bindParam(':periode_project',$periode_project);	
 			$insert_stmt->bindParam(':periode2_project',$periode2_project);	

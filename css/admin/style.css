@@ -139,7 +139,7 @@
     width: 15%;
     height: 35px;
 
-    margin-left: 1121px;
+    margin-left: 1112px;
 
     border-top-left-radius: 10px;
     border: solid 2px #b3b3b3;
@@ -163,7 +163,7 @@
     flex-direction: column;
 
     width: 95%;
-    height: 60vh;
+    /* height: 60vh; */
 
     margin-left: auto;
     margin-right: auto;
@@ -178,6 +178,7 @@
     flex-direction: row;
     justify-content: center;
 
+    margin-bottom: 65px;
     border-bottom: solid 1px black;
 }
 

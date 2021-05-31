@@ -8,26 +8,26 @@ if (empty($_SESSION['admin']))
 }
 else
 {
-    require_once("controller/config_bdd");
+    require_once("controller/config_bdd.php");
     
-        // if(isset($_REQUEST['delete_id']))
-        // {
-        //     // select image from db to delete
-        //     $id=$_REQUEST['delete_id'];	//get delete_id and store in $id variable
+        if(isset($_REQUEST['delete_id']))
+        {
+            // select image from db to delete
+            $id=$_REQUEST['delete_id'];	//get delete_id and store in $id variable
             
-        //     $select_stmt= $db->prepare('SELECT * FROM tbl_file WHERE id =:id');	//sql select query
-        //     $select_stmt->bindParam(':id',$id);
-        //     $select_stmt->execute();
-        //     $row=$select_stmt->fetch(PDO::FETCH_ASSOC);
-        //     unlink("upload/".$row['image']); //unlink function permanently remove your file
+            $select_stmt= $db->prepare('SELECT * FROM tbl_file WHERE id =:id');	//sql select query
+            $select_stmt->bindParam(':id',$id);
+            $select_stmt->execute();
+            $row=$select_stmt->fetch(PDO::FETCH_ASSOC);
+            unlink("upload/".$row['image']); //unlink function permanently remove your file
             
-        //     //delete an orignal record from db
-        //     $delete_stmt = $db->prepare('DELETE FROM tbl_file WHERE id =:id');
-        //     $delete_stmt->bindParam(':id',$id);
-        //     $delete_stmt->execute();
+            //delete an orignal record from db
+            $delete_stmt = $db->prepare('DELETE FROM project WHERE id =:id');
+            $delete_stmt->bindParam(':id',$id);
+            $delete_stmt->execute();
             
-        //     header("Location:index.php");
-        // }
+            header("Location:dashboard_project.php");
+        }
 
     include("header_admin.php");
 
@@ -40,29 +40,28 @@ else
                 </a>
             </div>
             <div class="edit_dashboard_projet">
-            
             <?php
-				$select_stmt=$db->prepare("SELECT * FROM tbl_file");
+				$select_stmt=$db->prepare("SELECT * FROM project");
 				$select_stmt->execute();
 			    while($row=$select_stmt->fetch(PDO::FETCH_ASSOC))
 			    {
 			?>
                 <div class="int_dashboard_projet">
                     <div class="img_boucle">
-                        <img src="img/projet1.png">
+                        <img src="upload/<?php echo $row['image']; ?>">
                     </div>
                     <div class="right_boucle">
                         <div class="petitText_boucle">
-                            <h4>Département du Jura</h4>
+                            <h4><?php echo $row['titre_project']; ?></h4>
                             <ul>
-                                <li><span>Langage :</span> HTML - CSS - JS</li>
-                                <li><span>Durée :</span> 1 semaine</li>
-                                <li><span>Période :</span> 12/04/2021 au 22/04/2021</li>
+                                <li><span>Langage : </span><?php echo $row['langage']; ?></li>
+                                <li><span>Durée : </span><?php echo $row['duree_project']; ?></li>
+                                <li><span>Période : </span><?php echo $row['periode_project']; ?> au <?php echo $row['periode2_project']; ?></li>
                             </ul>
                         </div>
                         <div class="edit_boucle">
                             <button id="edit"><a href="projet_edit.php">Éditer</a></button>
-                            <button id="delete">Supprimer</button>
+                            <button id="delete"><a href="?delete_id=<?php echo $row['id']; ?>">Supprimer</a></button>
                         </div>
                     </div>
                 </div>
