@@ -14,8 +14,8 @@ else
     {
         try
         {
-            $id = $_REQUEST['update_id']; //get "update_id" from index.php page through anchor tag operation and store in "$id" variable
-            $select_stmt = $db->prepare('SELECT * FROM project WHERE id =:id'); //sql select query
+            $id = $_REQUEST['update_id']; 
+            $select_stmt = $db->prepare('SELECT * FROM project WHERE id =:id'); 
             $select_stmt->bindParam(':id',$id);
             $select_stmt->execute(); 
             $row = $select_stmt->fetch(PDO::FETCH_ASSOC);
@@ -40,43 +40,43 @@ else
 		$description_project	= addslashes($_REQUEST['description_project']);
 		
 		$image_file	= $_FILES["txt_file"]["name"];
-		$type		= $_FILES["txt_file"]["type"];	//file name "txt_file"
+		$type		= $_FILES["txt_file"]["type"];	
 		$size		= $_FILES["txt_file"]["size"];
 		$temp		= $_FILES["txt_file"]["tmp_name"];
 			
-		$path="upload/".$image_file; //set upload folder path
+		$path="upload/".$image_file; 
 		
-		$directory="upload/"; //set upload folder path for update time previous file remove and new file upload for next use
+		$directory="upload/";
 		
 		if($image_file)
 		{
-			if($type=="image/jpg" || $type=='image/jpeg' || $type=='image/png' || $type=='image/gif') //check file extension
+			if($type=="image/jpg" || $type=='image/jpeg' || $type=='image/png' || $type=='image/gif') 
 			{	
-				if(!file_exists($path)) //check file not exist in your upload folder path
+				if(!file_exists($path)) 
 				{
-					if($size < 5000000) //check file size 5MB
+					if($size < 5000000) 
 					{
-						unlink($directory.$row['image']); //unlink function remove previous file
-						move_uploaded_file($temp, "upload/" .$image_file);	//move upload file temperory directory to your upload folder	
+						unlink($directory.$row['image']); 
+						move_uploaded_file($temp, "upload/" .$image_file);	
 					}
 					else
 					{
-						$errorMsg="Your File To large Please Upload 5MB Size"; //error message file size not large than 5MB
+						$errorMsg="Image trop grosse, maximum 5mb"; 
 					}
 				}
 				else
 				{	
-					$errorMsg="File Already Exists...Check Upload Folder"; //error message file not exists your upload folder path
+					$errorMsg="Image déjà existante"; 
 				}
 			}
 			else
 			{
-				$errorMsg="Upload JPG, JPEG, PNG & GIF File Formate.....CHECK FILE EXTENSION"; //error message file extension
+				$errorMsg="Mauvais format d'image ! choissiez seulement [JPG] - [JPEG] - [PNG] - [GIF]"; 
 			}
 		}
 		else
 		{
-			$image_file=$row['image']; //if you not select new image than previous image sam it is it.
+			$image_file=$row['image']; //Si aucune image est selectionné alors on laisse l'anciennce 
 		}
 	
 		if(!isset($errorMsg))
@@ -88,13 +88,12 @@ else
 			$update_stmt->bindParam(':periode_project_up',$periode_project);
 			$update_stmt->bindParam(':periode2_project_up',$periode2_project);
 			$update_stmt->bindParam(':description_project_up',$description_project);
-			$update_stmt->bindParam(':file_up',$image_file);	//bind all parameter
+			$update_stmt->bindParam(':file_up',$image_file);
 			$update_stmt->bindParam(':id',$id);
 			 
 			if($update_stmt->execute())
 			{
-				$updateMsg="File Update Successfully.......";	//file update success message
-				header("refresh:1;dashboard_projet.php");	//refresh 3 second and redirect to index.php page
+				header("refresh:1;dashboard_projet.php");
 			}
 		}
 	}
@@ -148,13 +147,6 @@ else
             	<strong>WRONG ! <?php echo $errorMsg; ?></strong>
             </div>
             <?php
-		}
-		if(isset($insertMsg)){
-		?>
-			<div class="alert alert-success">
-				<strong>SUCCESS ! <?php echo $insertMsg; ?></strong>
-			</div>
-        <?php
 		}
 		?>   
             </div>

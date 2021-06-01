@@ -12,16 +12,15 @@ else
     
         if(isset($_REQUEST['delete_id']))
         {
-            // select image from db to delete
-            $id=$_REQUEST['delete_id'];	//get delete_id and store in $id variable
+            // Selectionne l'image à supprimer dans la bdd
+            $id=$_REQUEST['delete_id'];	//On stock delete_id dans $id
             
-            $select_stmt= $db->prepare('SELECT * FROM project WHERE id =:id');	//sql select query
+            $select_stmt= $db->prepare('SELECT * FROM project WHERE id =:id');
             $select_stmt->bindParam(':id',$id);
             $select_stmt->execute();
             $row=$select_stmt->fetch(PDO::FETCH_ASSOC);
-            unlink("upload/".$row['image']); //unlink function permanently remove your file
+            unlink("upload/".$row['image']); //Permet de supprimer un fichier (l'image) du dossier 
             
-            //delete an orignal record from db
             $delete_stmt = $db->prepare('DELETE FROM project WHERE id =:id');
             $delete_stmt->bindParam(':id',$id);
             $delete_stmt->execute();

@@ -27,7 +27,7 @@ if(isset($_REQUEST['btn_insert']))
 		else if(empty($image_file)){
 			$errorMsg="Please Select Image";
 		}
-		else if($type=="image/jpg" || $type=='image/jpeg' || $type=='image/png' || $type=='image/JPG' || $type=='image/gif') 
+		else if($type=="image/jpg" || $type=='image/jpeg' || $type=='image/png' || $type=='image/gif') 
 		{	
 			if(!file_exists($path)) //Regarde si l'image existe dans /upload
 			{
@@ -37,7 +37,7 @@ if(isset($_REQUEST['btn_insert']))
 				}
 				else
 				{
-					$errorMsg="Image trop gros, maximum 5mb"; 
+					$errorMsg="Image trop grosse, maximum 5mb"; 
 				}
 			}
 			else
@@ -63,7 +63,7 @@ if(isset($_REQUEST['btn_insert']))
 		
 			if($insert_stmt->execute())
 			{
-				header("refresh:3;dashboard_projet.php"); //On redirige vers la page dashboard_project
+				header("refresh:3;dashboard_projet.php"); 
 			}
 		}
 	}
