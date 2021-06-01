@@ -39,7 +39,7 @@ else
                     <input class="file_project" type="file" name="txt_file"/>
                     
                     <p>Description :</p>
-                    <textarea class="description_projet" type="textarea" name="desc_project" placeholder="Description du projet"></textarea>
+                    <textarea class="description_projet" type="textarea" name="description_project" placeholder="Description du projet"></textarea>
                     
                     <div class="send">
                         <button class="send" name="btn_insert" value="Insert"> <i class="far fa-paper-plane"></i>&nbsp; &nbsp; Envoyer</button>

@@ -15,7 +15,7 @@ else
             // select image from db to delete
             $id=$_REQUEST['delete_id'];	//get delete_id and store in $id variable
             
-            $select_stmt= $db->prepare('SELECT * FROM tbl_file WHERE id =:id');	//sql select query
+            $select_stmt= $db->prepare('SELECT * FROM project WHERE id =:id');	//sql select query
             $select_stmt->bindParam(':id',$id);
             $select_stmt->execute();
             $row=$select_stmt->fetch(PDO::FETCH_ASSOC);
@@ -26,7 +26,7 @@ else
             $delete_stmt->bindParam(':id',$id);
             $delete_stmt->execute();
             
-            header("Location:dashboard_project.php");
+            header("Location:dashboard_projet.php");
         }
 
     include("header_admin.php");
@@ -60,7 +60,7 @@ else
                             </ul>
                         </div>
                         <div class="edit_boucle">
-                            <button id="edit"><a href="projet_edit.php">Éditer</a></button>
+                            <button id="edit"><a href="edit_projet.php?update_id=<?php echo $row['id']; ?>">Éditer</a></button>
                             <button id="delete"><a href="?delete_id=<?php echo $row['id']; ?>">Supprimer</a></button>
                         </div>
                     </div>
