@@ -6,22 +6,22 @@ include('header.php');
 <div class="contact_container">
     <h3>Formulaire de contact</h3>
     <hr id="titre">
-    <form action="?" method="post">
+    <form action="controller/contact_form.php" method="post">
 		<div class="form">
 			<div class="separator">
-				<input class="name1" type="text" placeholder="Name"/>
+				<input class="name1" type="text" placeholder="Name" name="name"/>
 				<hr>
-				<input class="mail1" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Invalid email address" placeholder="Email"/>
+				<input class="mail1" type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Invalid email address" placeholder="Email"/>
 				<hr>
-				<input class="subject" type="text" placeholder="Subject"/>
+				<input class="subject" type="text" name="subject" placeholder="Subject"/>
 				<hr>
 			</div>
-			<textarea type="textarea" placeholder="Message"></textarea>
+			<textarea type="textarea" name="message" placeholder="Message"></textarea>
 		</div>
+		<div class="send">
+        	<button	button class="send" name="envoi"> <i class="far fa-paper-plane"></i>&nbsp; &nbsp; Envoyer</button>
+    	</div>
 	</form>
-    <div class="send">
-        <button class="send"> <i class="far fa-paper-plane"></i>&nbsp; &nbsp; Envoyer</button>
-    </div>
 </div>
 
 <?php
