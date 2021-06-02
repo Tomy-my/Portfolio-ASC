@@ -94,10 +94,10 @@ include('header.php');
             <div class="formation">
                 <h3>Mes formations</h3>
                 <h4>Acces Code School | Developpeur web</h4>
-                <p>- Diplôme : Niveau bac+ 2  <br>- Lieux : 58000 Nevers<br>- Durée : 8 mois (Actuellement en cours)</p>
+                <p>- Diplôme : Niveau bac+ 2  <br>- lieu : 58000 Nevers<br>- Durée : 8 mois (Actuellement en cours)</p>
                 <hr>
                 <h4>École de la deuxième chance (E2C Nièvre)</h4>
-                <p>- Diplôme : Remise à niveau des matières générales  <br>- Lieux : 58640 Varennes-Vauzelles<br>- Durée : 1 an</p>
+                <p>- Diplôme : Remise à niveau des matières générales  <br>- lieu : 58640 Varennes-Vauzelles<br>- Durée : 1 an</p>
             </div>
             <div class="caractere">
                 <h3>Mes principales Qualités</h3>
