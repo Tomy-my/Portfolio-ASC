@@ -16,7 +16,7 @@ include('header.php');
     <div class="container_projet1">
         <img src="upload/<?php echo $row['image']; ?>">
         <div class="text_projet">
-            <h1><a href="#"><?php echo $row['titre_project']; ?></a></h1>
+            <h1><a href="<?php echo $row['url']; ?>"><?php echo $row['titre_project']; ?></a></h1>
             <hr>
             <ul>
                 <li><span>Langage :</span> <?php echo $row['langage']; ?></li>

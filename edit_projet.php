@@ -33,6 +33,7 @@ else
 	try
 	{
         $titre_project			= $_REQUEST['titre_project'];	
+        $url					= $_REQUEST['url'];	
 		$langage				= $_REQUEST['langage'];	
 		$duree_project			= $_REQUEST['duree_project'];	
 		$periode_project		= $_REQUEST['periode_project'];	
@@ -81,8 +82,9 @@ else
 	
 		if(!isset($errorMsg))
 		{
-			$update_stmt=$db->prepare('UPDATE project SET titre_project=:titre_project_up, langage=:langage_up, duree_project=:duree_project_up, periode_project=:periode_project_up, periode2_project=:periode2_project_up, description_project=:description_project_up, image=:file_up WHERE id=:id'); //sql update query
+			$update_stmt=$db->prepare('UPDATE project SET titre_project=:titre_project_up, url=:url_up, langage=:langage_up, duree_project=:duree_project_up, periode_project=:periode_project_up, periode2_project=:periode2_project_up, description_project=:description_project_up, image=:file_up WHERE id=:id'); //sql update query
 			$update_stmt->bindParam(':titre_project_up',$titre_project);
+			$update_stmt->bindParam(':url_up',$url);
 			$update_stmt->bindParam(':langage_up',$langage);
 			$update_stmt->bindParam(':duree_project_up',$duree_project);
 			$update_stmt->bindParam(':periode_project_up',$periode_project);
@@ -114,6 +116,9 @@ else
                     
                     <p>Titre du projet :</p>
                     <input class="titre_projet" type="text" name="titre_project" value="<?php echo $titre_project; ?>" />
+
+					<p>URL du projet :</p>
+                    <input class="titre_projet" type="text" name="url" value="<?php echo $url; ?>" />
                     
                     <div class="checkbox_projet">
                         <p>Langage(s) utilisé(s):</p>
@@ -153,4 +158,4 @@ else
         </div>
 <?php 
 }
-?>
+?> 

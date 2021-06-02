@@ -21,6 +21,9 @@ else
                     
                     <p>Titre du projet :</p>
                     <input class="titre_projet" type="text" name="titre_project" placeholder="Titre"/>
+
+                    <p>URL du projet :</p>
+                    <input class="titre_projet" type="text" name="url" placeholder="Si aucune url marquer #"/>
                     
                     <div class="checkbox_projet">
                         <p>Langage(s) utilisé(s):</p>
@@ -52,14 +55,12 @@ else
             <div class="alert alert-danger">
             	<strong>ATTENTION ! <?php echo $errorMsg; ?></strong>
             </div>
-            <?php
+        <?php
 		}
-		if(isset($insertMsg)){
 		?>
             </div>
         </div>
 
-
 <?php 
 }
-?>
+?> 

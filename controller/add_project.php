@@ -7,6 +7,7 @@ if(isset($_REQUEST['btn_insert']))
 	try
 	{
 		$titre_project			= $_REQUEST['titre_project'];	
+		$url					= $_REQUEST['url'];	
 		$langage				= $_REQUEST['langage'];	
 		$duree_project			= $_REQUEST['duree_project'];	
 		$periode_project		= $_REQUEST['periode_project'];	
@@ -52,8 +53,9 @@ if(isset($_REQUEST['btn_insert']))
 		
 		if(!isset($errorMsg))
 		{
-			$insert_stmt=$db->prepare('INSERT INTO project(titre_project,image,langage,duree_project,periode_project,periode2_project,description_project) VALUES(:titre_project,:fimage,:langage,:duree_project,:periode_project,:periode2_project,:description_project)');				
+			$insert_stmt=$db->prepare('INSERT INTO project(titre_project,url,image,langage,duree_project,periode_project,periode2_project,description_project) VALUES(:titre_project,:url,:fimage,:langage,:duree_project,:periode_project,:periode2_project,:description_project)');				
 			$insert_stmt->bindParam(':titre_project',$titre_project);	
+			$insert_stmt->bindParam(':url',$url);	
 			$insert_stmt->bindParam(':langage',$langage);	
 			$insert_stmt->bindParam(':duree_project',$duree_project);	
 			$insert_stmt->bindParam(':periode_project',$periode_project);	
@@ -63,7 +65,7 @@ if(isset($_REQUEST['btn_insert']))
 		
 			if($insert_stmt->execute())
 			{
-				header("refresh:3;dashboard_projet.php"); 
+				header("refresh:1;dashboard_projet.php"); 
 			}
 		}
 	}
@@ -71,4 +73,4 @@ if(isset($_REQUEST['btn_insert']))
 	{
 		echo $e->getMessage();
 	}
-}
+} 
