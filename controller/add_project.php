@@ -29,7 +29,7 @@ if(isset($_REQUEST['btn_insert']))
 		}
 		else if($type=="image/jpg" || $type=='image/jpeg' || $type=='image/png' || $type=='image/gif') 
 		{	
-			if(!file_exists($path)) //Regarde si l'image existe dans /upload
+			if(!file_exists($path)) //Regarde si l'image existe dans /upload 
 			{
 				if($size < 5000000) //Fichié maximum
 				{

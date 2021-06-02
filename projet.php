@@ -1,48 +1,34 @@
 <?php
 $titre = "Projets";
 
+include('controller/config_bdd.php');
+
 include('header.php');
 ?>
 
 <div class="projet_container">
+<?php
+	$select_stmt=$db->prepare("SELECT * FROM project ORDER BY id DESC");
+	$select_stmt->execute();
+		while($row=$select_stmt->fetch(PDO::FETCH_ASSOC))
+	{
+?>
     <div class="container_projet1">
-        <img src="img/projet1">
+        <img src="upload/<?php echo $row['image']; ?>">
         <div class="text_projet">
-            <h1><a href="#">Département du Jura</a></h1>
+            <h1><a href="#"><?php echo $row['titre_project']; ?></a></h1>
             <hr>
             <ul>
-                <li><span>Langage :</span> HTML - CSS - JS</li>
-                <li><span>Durée :</span> 1 semaine</li>
-                <li id="last"><span>Période :</span> 12/04/2021 au 22/04/2021</li>
+                <li><span>Langage :</span> <?php echo $row['langage']; ?></li>
+                <li><span>Durée :</span> <?php echo $row['duree_project']; ?></li>
+                <li id="last"><span>Période :</span> <?php echo $row['periode_project']; ?> au <?php echo $row['periode2_project']; ?></li>
             </ul>
-            <p>
-                Le projet consiste à choisir un département français afin de lui créer un site internet. Pour cela nous devions créer une maquette représentant nos idées, créer un logo et ensuite intégrer la maquette.
-                <br>
-                Pour réaliser le logo, je suis parti d’une base déjà existante en Vecteurs. Je l’ai modifié et exporté en VSG afin de l’intégrer pour le site web.
-                Ensuite, pour dessiner la maquette, j’ai utilisé Paint afin de me donner un minium de directive pour éviter de partir dans tous les sens. La maquette est tout de même restée très simple afin de me laisser improviser comme je le sentais.
-
-            </p>
+            <p><?php echo $row['description_project']; ?></p>
         </div>
     </div>
-    <div class="container_projet1">
-        <img src="img/projet1" onclick="projet1()">
-        <div class="text_projet">
-            <h1>Département du Jura</h1>
-            <hr>
-            <ul>
-                <li><span>Langage :</span> HTML - CSS - JS</li>
-                <li><span>Durée :</span> 1 semaine</li>
-                <li id="last"><span>Période :</span> 12/04/2021 au 22/04/2021</li>
-            </ul>
-            <p>
-                Le projet consiste à choisir un département français afin de lui créer un site internet. Pour cela nous devions créer une maquette représentant nos idées, créer un logo et ensuite intégrer la maquette.
-                <br>
-                Pour réaliser le logo, je suis parti d’une base déjà existante en Vecteurs. Je l’ai modifié et exporté en VSG afin de l’intégrer pour le site web.
-                Ensuite, pour dessiner la maquette, j’ai utilisé Paint afin de me donner un minium de directive pour éviter de partir dans tous les sens. La maquette est tout de même restée très simple afin de me laisser improviser comme je le sentais.
-
-            </p>
-        </div>
-    </div>
+<?php
+	}
+?>
 </div>
 
 <?php

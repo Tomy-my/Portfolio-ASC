@@ -40,7 +40,7 @@ else
             </div>
             <div class="edit_dashboard_projet">
             <?php
-				$select_stmt=$db->prepare("SELECT * FROM project");
+				$select_stmt=$db->prepare("SELECT * FROM project ORDER BY id DESC");
 				$select_stmt->execute();
 			    while($row=$select_stmt->fetch(PDO::FETCH_ASSOC))
 			    {

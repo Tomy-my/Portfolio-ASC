@@ -1,0 +1,111 @@
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+                                /* Responsive container .me */                                                    
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+
+@media only screen and (max-width : 1739px){
+    .cercle{
+        width: 175px;
+        height: 175px;
+    }
+    p#nom{
+        font-size: 28px;
+    }
+    p#job{
+        font-size: 14px;
+    }
+    button.email{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width : 1630px){
+    .cercle{
+        width: 160px;
+        height: 160px;
+    }
+    p#nom{
+        font-size: 26px;
+    }
+    button.email{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width : 1550px){
+    button.email{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width : 1470px){
+    button.email{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width : 1430px){
+    .cercle{
+        width: 140px;
+        height: 140px;
+    }
+    #hi{
+        margin-left: 18px;
+    }
+    p#nom{
+        font-size: 25px;
+    }
+    button.email{
+        font-size: 13px;
+    }
+}
+
+
+
+                                                
+@media only screen and (max-height : 810px){
+    .me{
+        height: 55vh;
+    }
+}
+
+@media only screen and (max-height : 733px){
+    .me{
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-height : 676px){
+    .me{
+        height: 70vh;
+    }
+}
+
+@media only screen and (max-height : 585px){
+    .me{
+        height: 75vh;
+    }
+}
+
+@media only screen and (max-height : 495px){
+    .me{
+        height: 90vh;
+    }
+}
+
+@media only screen and (max-height : 445px){
+    .me{
+        height: 100vh;
+    }
+}
+
+@media only screen and (max-height : 430px){
+    .me{
+        height: 110vh;
+    }
+}
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */

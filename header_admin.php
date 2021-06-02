@@ -18,7 +18,7 @@
             <div id="projet" > <a href="projet.php">Projets</a></div>
             <div id="cv"     > <a href="cv.php">C.V</a></div>
             <div id="cv"     > <a href="#">|</a></div>
-            <div id="dashboard_projet"  > <a href="dashboard_projet">Dashboard : Projets</a></div>
+            <div id="dashboard_projet"  > <a href="dashboard_projet.php">Dashboard : Projets</a></div>
             <div id="dashboard_cv"      > <a href="#">Dashboard : C.V</a></div>
             <div id="logout"            > <a href="controller/logout.php">Déconnexion</a></div>
 		</nav>

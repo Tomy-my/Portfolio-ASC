@@ -37,7 +37,7 @@ else
 		$duree_project			= $_REQUEST['duree_project'];	
 		$periode_project		= $_REQUEST['periode_project'];	
 		$periode2_project		= $_REQUEST['periode2_project'];	
-		$description_project	= addslashes($_REQUEST['description_project']);
+		$description_project	= $_REQUEST['description_project'];
 		
 		$image_file	= $_FILES["txt_file"]["name"];
 		$type		= $_FILES["txt_file"]["type"];	

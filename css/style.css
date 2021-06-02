@@ -384,6 +384,8 @@ button.email{
   width: 36vw;
   margin-left: 40px;
   margin-right: 2px;
+  margin-bottom: 65px;
+
   padding: 40px;
   padding-bottom: 0px;
 
@@ -544,10 +546,6 @@ button.email{
   width: 44%;
 }
 
-.circle_personnel svg{
-  width: 102%;
-}
-
 .chart[data-percent='4'] .outer {
   stroke-dashoffset: 355;         /*Valeur de fin */
   animation: show4 2s;
@@ -630,9 +628,8 @@ p#title_slide{
 }
 
 .formation{
-  height: 40vh;
   margin-top: 50px;
-  margin-bottom: 65px;
+  margin-bottom: 50px;
   border-bottom: solid 1px #999;
 }
 
@@ -652,7 +649,7 @@ p#title_slide{
 
 .formation p{
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 65px;
 
   font-size: 17px;
   color: #999;
@@ -665,9 +662,7 @@ p#title_slide{
 
 
 .caractere{
-  height: 40vh;
-
-  margin-bottom: 65px;
+  margin-bottom: 50px;
   border-bottom: solid 1px #999;
 }
 
@@ -709,7 +704,7 @@ p#title_slide{
 }
 
 img#ampoule{
-  width: 65%;
+  width: 50%;
 }
 
 

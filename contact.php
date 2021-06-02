@@ -27,6 +27,3 @@ include('header.php');
 <?php
 include('footer.php');
 ?>
-
-
-<!-- <img src="img/svg/contact.svg" alt="Image de décoration"> -->

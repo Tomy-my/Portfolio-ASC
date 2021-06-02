@@ -50,18 +50,12 @@ else
 		{
 			?>
             <div class="alert alert-danger">
-            	<strong>WRONG ! <?php echo $errorMsg; ?></strong>
+            	<strong>ATTENTION ! <?php echo $errorMsg; ?></strong>
             </div>
             <?php
 		}
 		if(isset($insertMsg)){
 		?>
-			<div class="alert alert-success">
-				<strong>SUCCESS ! <?php echo $insertMsg; ?></strong>
-			</div>
-        <?php
-		}
-		?>   
             </div>
         </div>
 

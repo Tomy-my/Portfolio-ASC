@@ -100,20 +100,18 @@ include('header.php');
                 <p>- Diplôme : Remise à niveau des matières générales  <br>- Lieux : 58640 Varennes-Vauzelles<br>- Durée : 1 an</p>
             </div>
             <div class="caractere">
-                <h3>Qualités / Défauts</h3>
+                <h3>Mes principales Qualités</h3>
                 <div class="int_cara">
                     <div class="left_cara">
                     <ui>
-                        <li><i class="fas fa-check"></i>Curieux</li>
-                        <li><i class="fas fa-check"></i>Logique</li>
-                        <li><i class="fas fa-check"></i>Attentif</li>
-                        <li><i class="fas fa-times"></i>Impatient</li>
-                        <li><i class="fas fa-check"></i>Perséverant</li>
+                        <li style="width: 320.1px;"><i class="fas fa-check"></i>Curieux</li>
+                        <li style="width: 323.6px;"><i class="fas fa-check"></i>Logique</li>
+                        <li style="width: 320.1px;"><i class="fas fa-check"></i>Attentif</li>
+                        <li style="width: 359.1px;"><i class="fas fa-check"></i>Perséverant</li>
                     </ui>
                     </div>
                     <div class="right_cara">
                         <img id="ampoule" src="img/svg/ampoule.svg" alt="Décoration">
-                        <?php include('img/svg/svg.php'); ?>
                     </div>
                 </div>
             </div>
